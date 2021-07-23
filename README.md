@@ -1,4 +1,4 @@
-# Micro-frontend notes
+# Micro Front-End
 
 ## Benefits
 

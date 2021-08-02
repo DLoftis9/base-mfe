@@ -75,21 +75,23 @@ The reason for this is to be able to have different versions of react router or 
 
 The most common way of setting up navigation inside of micro-frontends and apps when it comes to history is to make use of browser history inside of your container and then memory history inside of all the different sub applications.
 
-The reason's for this are, 
-* Different sub applications and the container might have different routing solutions. 
-* Second, even if they are using the same routing libraries, we might decide to use different versions between them entirely possible.
-* If a developer decides to upgrade the version of the routing library inside, the container, there isn't the overhead of having to refactor all of the routing logic inside of all the different containers.
-* This approach will allow access between multiple front-ends too.
+The reason's for this are,
+
+- Different sub applications and the container might have different routing solutions.
+- Second, even if they are using the same routing libraries, we might decide to use different versions between them entirely possible.
+- If a developer decides to upgrade the version of the routing library inside, the container, there isn't the overhead of having to refactor all of the routing logic inside of all the different containers.
+- This approach will allow access between multiple front-ends too.
 
 A data management library would be recommended to take care of the data. But for this base repo, it is implemented without a data manager.
 
 Routing libraries can really be thought of as two separate parts. First is the history object. The history object is an object that is used to figure out what path the user is currently visiting inside of application and then eventually make changes to that path as well.
 
 These objects are:
-* Browser History
-* Hash History
-* Memory History
-(Each library may use different syntax for these objects)
+
+- Browser History
+- Hash History
+- Memory History
+  (Each library may use different syntax for these objects)
 
 The other component of these routing libraries is a router. The router is used to figure out what content to show to the user based upon the current path that they are visiting.
 
@@ -105,15 +107,17 @@ Additionally, there’s a bunch of dependecies being used, and versions change a
 
 ## Dependecies
 
-* webpack (@5.4.0)
+- webpack (@5.4.0)
 
-* webpack-cli (@4.2.0)
+- webpack-cli (@4.2.0)
 
-* webpack-dev-server (@3.11.0)
+- webpack-dev-server (@3.11.0)
 
-* faker (@5.1.0)
-(Just use to generate fake data)
+- faker (@5.1.0)
+  (Just use to generate fake data)
 
-* html-webpack-plugin (@4.5.0)
+- html-webpack-plugin (@4.5.0)
 
-* nodemon
+- nodemon
+
+[For markdown documentation](https://guides.github.com/features/mastering-markdown/)

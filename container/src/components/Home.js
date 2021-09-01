@@ -1,5 +1,5 @@
-import { mount } from "home/Home";
-import React, { useRef, useEffect } from "react";
+import { mount } from 'home/Home';
+import React, { useRef, useEffect } from 'react';
 
 // can use this exact same approach with just about any
 // other framework that we ever use inside of a child
@@ -11,11 +11,11 @@ import React, { useRef, useEffect } from "react";
 // with any other library or framework.
 
 export default () => {
-  const ref = useRef(null);
+	const ref = useRef(null);
 
-  useEffect(() => {
-    mount(ref.current);
-  });
+	useEffect(() => {
+		mount(ref.current);
+	});
 
-  return <div ref={ref} />;
+	return <div ref={ref} />;
 };

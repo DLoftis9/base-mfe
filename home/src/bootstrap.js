@@ -1,20 +1,23 @@
-import React from "react";
-import ReactDom from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDom from 'react-dom';
+import { createMemoryHistory } from 'history';
+import App from './App';
 
 // mount function to start the app
 const mount = (el) => {
-  ReactDom.render(<App />, el);
+	const history = createMemoryHistory();
+
+	ReactDom.render(<App history={history} />, el);
 };
 
 // if we are in development and in
 // isolation, call mount immediately
-if (process.env.NODE_ENV === "development") {
-  const devRoot = document.querySelector("#_home-root");
+if (process.env.NODE_ENV === 'development') {
+	const devRoot = document.querySelector('#_home-root');
 
-  if (devRoot) {
-    mount(devRoot);
-  }
+	if (devRoot) {
+		mount(devRoot);
+	}
 }
 
 // we are running through container and

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Publication = () => (
 	<div>
 		Publication Page!
-		<Link to='/home'>
+		<Link to='/'>
 			<button style={{ backgroundColor: 'gray', color: 'black' }}>
 				Home Page
 			</button>

@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 
 export default () => (
-	<div className='app'>
+	<div className='home-app'>
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/contact' component={Contact} />

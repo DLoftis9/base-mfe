@@ -19,10 +19,10 @@ const devConfig = {
 			name: 'container',
 			remotes: {
 				home: 'home@http://localhost:3001/remoteEntry.js',
-<<<<<<< Updated upstream
-=======
+
 				publication: 'publication@http://localhost:3002/remoteEntry.js',
->>>>>>> Stashed changes
+
+				publication: 'publication@http://localhost:3001/remoteEntry.js',
 			},
 			shared: packageJson.dependencies,
 		}),

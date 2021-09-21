@@ -61,30 +61,37 @@ For this demo, I’ve implemented build-time and run-time (majority run-time) in
 
 - **Using the Webpack module Federation, it’s flexible for this demo**
 
-## Dependecies
-
-webpack (@5.4.0)
-
-webpack-cli (@4.2.0)
-
-webpack-dev-server (@3.11.0)
-
-faker (@5.1.0)
-(Just use to generate fake data)
-
-html-webpack-plugin (@4.5.0)
-
-nodemon
-
 ## Architecture
+
+For this demo, no shared imports functinos/objects/classes etc with outher front-ends No shared state amongst front-ends. Just to prevent any coupling, and to elevaiate migration issues if this service is going to be replaced or discontinued.
+
+Shared libraries via Module Federation The container does not need to be aware of the specific front-end frame-work Able to use a monorepo or a seperate repo. Seperate repos require more setup This demo is setup as a monorepo
+
+## Routing Amongst Apps
+
+Navigation is implemented in a geneic way, so different apps can communicate information about routing. In this case, routing implementation is done in the container app, and passed down to the sub apps. This repo's routing logic is inside of the container that's going to decide what sub app we want to show at any given time. And then inside of all the sub applications, there is routing logic to decide what actual page to display on the screen.
+
+The reason for this is to be able to have different versions of react router or even different routing libraries entirely inside of each of these different applications. Whenever a copy of React Router is created, we have to tell it exactly what kind of history we want to use so we can utilize, browser history, memory, history or hash history.
+
+The most common way of setting up navigation inside of micro-frontends and apps when it comes to history is to make use of browser history inside of your container and then memory history inside of all the different sub applications.
+
+The reason's for this are,
+
+- Different sub applications and the container might have different routing solutions.
+- Second, even if they are using the same routing libraries, we might decide to use different versions between them entirely possible.
+- If a developer decides to upgrade the version of the routing library inside, the container, there isn't the overhead of having to refactor all of the routing logic inside of all the different containers.
+- This approach will allow access between multiple front-ends too.
 
 For this demo, no shared imports functions/objects/classes etc with other front-ends
 
 No shared state amongst front-ends. Just to prevent any coupling, and to elevate migration issues if this service is going to be replaced or discontinued.
 
-Shared libraries via Module Federation
+These objects are:
 
-The container does not need to be aware of the specific front-end frame-work
+- Browser History
+- Hash History
+- Memory History
+  (Each library may use different syntax for these objects)
 
 Able to use a monorepo or a separate repo. separate repos require more setup
 This demo is setup as a monorepo
@@ -98,3 +105,20 @@ Additionally, there’s a bunch of dependicies being used, and versions change a
 [cz-cli](https://github.com/commitizen/cz-cli)
 
 [commit lint](https://github.com/conventional-changelog/commitlint)
+
+## Dependecies
+
+- webpack (@5.4.0)
+
+- webpack-cli (@4.2.0)
+
+- webpack-dev-server (@3.11.0)
+
+- faker (@5.1.0)
+  (Just use to generate fake data)
+
+- html-webpack-plugin (@4.5.0)
+
+- nodemon
+
+[For markdown documentation](https://guides.github.com/features/mastering-markdown/)

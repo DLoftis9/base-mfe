@@ -19,6 +19,7 @@ const devConfig = {
 			name: 'container',
 			remotes: {
 				home: 'home@http://localhost:3001/remoteEntry.js',
+				home: 'publication@http://localhost:3002/remoteEntry.js',
 			},
 			shared: packageJson.dependencies,
 		}),

@@ -10,7 +10,7 @@ const mount = (el) => {
 // if we are in development and in
 // isolation, call mount immediately
 if (process.env.NODE_ENV === 'development') {
-	const devRoot = document.querySelector('#_home-root');
+	const devRoot = document.querySelector('#_publication-root');
 
 	if (devRoot) {
 		mount(devRoot);

@@ -5,7 +5,7 @@ import Home from './components/Home';
 
 export default () => (
 	<div className='publication-app'>
-		Publication Page
+		<h2>Publication App</h2>
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/publication' component={Publication} />

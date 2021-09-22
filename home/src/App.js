@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 
 export default () => (
 	<div className='home-app'>
+		<h2>Home App</h2>
 		<BrowserRouter>
 			<Switch>
 				<Route exact path='/contact' component={Contact} />

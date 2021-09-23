@@ -9,14 +9,14 @@ const prodConfig = {
 	mode: 'production',
 	output: {
 		filename: '[name].[contenthash].js',
-		publicPath: '/publication/latest/',
+		publicPath: '/landing/latest/',
 	},
 	plugins: [
 		new ModuleFederationPlugin({
-			name: 'publication',
+			name: 'landing',
 			filename: 'remoteEntry.js',
 			exposes: {
-				'./Publication': './src/bootstrap',
+				'./Landing': './src/bootstrap',
 			},
 			shared: packageJson.dependencies,
 		}),

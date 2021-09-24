@@ -1,4 +1,4 @@
-import { mount } from 'home/Home';
+import { mount } from 'publication/Publication';
 import React, { useRef, useEffect } from 'react';
 
 // can use this exact same approach with just about any

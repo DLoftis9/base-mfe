@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Home = () => (
 	<div>
-		<Link to='/contact'>
+		Publication Page!
+		<Link to='/home'>
 			<button style={{ backgroundColor: 'gray', color: 'black' }}>
-				to: Contact Page
+				Contact Page
 			</button>
 		</Link>
 	</div>

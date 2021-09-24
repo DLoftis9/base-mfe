@@ -1,15 +1,15 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Publication from './components/Publication';
 import Home from './components/Home';
-import Contact from './components/Contact';
 
 export default () => (
-	<div className='home-app'>
-		<h2>Home App</h2>
+	<div className='publication-app'>
+		<h2>Publication App</h2>
 		<BrowserRouter>
 			<Switch>
-				<Route exact path='/contact' component={Contact} />
-				<Route path='/' component={Home} />
+				<Route exact path='/publication' component={Publication} />
+				<Route path='/home' component={Home} />
 			</Switch>
 		</BrowserRouter>
 	</div>

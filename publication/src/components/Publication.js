@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => (
+const Publication = () => (
 	<div>
-		<Link to='/contact'>
+		<Link to='/'>
 			<button style={{ backgroundColor: 'gray', color: 'black' }}>
-				to: Contact Page
+				to: Home Page
 			</button>
 		</Link>
 	</div>
 );
 
-export default Home;
+export default Publication;

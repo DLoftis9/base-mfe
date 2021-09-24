@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import App from './App';
+import { createApp } from 'vue';
+import Landing from './components/Landing';
 
 // mount function to start the app
 const mount = (el) => {
-	ReactDom.render(<App />, el);
+	const app = createApp(Landing);
+	app.mount(el);
 };
 
 // if we are in development and in
